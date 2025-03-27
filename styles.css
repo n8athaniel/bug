@@ -1,0 +1,60 @@
+:root {
+    --pixel-size: 6;
+}
+ 
+.bug {
+    width: calc(32px * var(--pixel-size));
+    height: calc(32px * var(--pixel-size));
+    overflow: hidden;
+    position: relative;
+    margin: 4em auto;
+}
+ 
+.bug-sprite {
+    width: calc(128px * var(--pixel-size));
+    position: absolute;
+}
+ 
+.pixelart {
+    image-rendering: pixelated;
+}
+ 
+.walking .bug-sprite {
+    animation: moveWalkingSprite 1s steps(2) infinite;
+    top: 0;
+}
+ 
+.dead .bug-sprite {
+    animation: moveDeadSprite 1s steps(2) infinite;
+    top: 0;
+}
+ 
+@keyframes moveWalkingSprite {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(calc(-64px * var(--pixel-size)), 0, 0);
+    }
+}
+
+@keyframes moveDeadSprite {
+    from {
+        transform: translate3d(calc(-64px * var(--pixel-size)), 0 ,0);
+    }
+    to {
+        transform: translate3d(calc(-128px * var(--pixel-size)), 0 ,0);
+    }
+}
+
+
+/* Other stuff then the buggy stuff */ 
+body {
+    background: #232323;
+}
+
+p {
+    color: #cacaca;
+    font-size: 20px;
+    text-align: center;
+}
