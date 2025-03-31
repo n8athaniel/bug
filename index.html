@@ -3,33 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pixel Art Bugs Animation</title>
+    <title>2</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <p>Bug 1: walking</p>
-    <div class="bug walking">
-      <img class="bug-sprite pixelart" src="BugSprite.png" />
-    </div>
-    <p>Bug 1: dead</p>
-    <div class="bug dead">
-      <img class="bug-sprite pixelart" src="BugSprite.png" />
-    </div>
-    <p>Bug 2: walking</p>
-    <div class="bug walking bug2">
-      <img class="bug-sprite pixelart" src="BugSprite.png" />
-    </div>
-    <p>Bug 2: dead</p>
-    <div class="bug dead bug2">
-      <img class="bug-sprite pixelart" src="BugSprite.png" />
-    </div>
-    <p>Bug 3: walking</p>
-    <div class="bug walking bug3">
-      <img class="bug-sprite pixelart" src="BugSprite.png" />
-    </div>
-    <p>Bug 3: dead</p>
-    <div class="bug dead bug3">
-      <img class="bug-sprite pixelart" src="BugSprite.png" />
-    </div>
+    <button onclick="addBug()">Add Bug</button>
+    <button onclick="killRandomBug()">Kill Random Bug</button>
+    <div id="bug-container"></div>
+
+    <script src="script.js"></script>
   </body>
 </html>
